@@ -75,8 +75,39 @@ function renderMarkers() {
   const fuse = new Fuse(window.eventData, { keys: ['event_name'], threshold: 0.3 });
   const filteredData = searchQuery ? fuse.search(searchQuery).map(r => r.item) : window.eventData;
 
-  filteredData.forEach(event => {
-    const start = new Date(event.start_date);
+  console.log("Rendering", filteredData.length, "events");
+
+filteredData.forEach(event => {
+  const start = new Date(event.start_date);
+  const now = new Date();
+
+  if (document.getElementById('filterFutureOnly').checked && start < now) {
+    console.log("Skipping past event:", event.event_name);
+    return;
+  }
+
+  if (!getCheckedValues('filter-type').includes(event.event_type)) {
+    console.log("Skipping type:", event.event_type);
+    return;
+  }
+
+  if (!getCheckedValues('filter-format').includes(event.format)) {
+    console.log("Skipping format:", event.format);
+    return;
+  }
+
+  if (!getCheckedValues('filter-duration').includes(event.event_duration)) {
+    console.log("Skipping duration:", event.event_duration);
+    return;
+  }
+
+  if (isNaN(event.lat) || isNaN(event.lon)) {
+    console.log("Skipping invalid coords:", event.event_name, event.lat, event.lon);
+    return;
+  }
+
+  console.log("✔ Showing:", event.event_name);
+
     if (showFutureOnly && start < now) return;
     if (!types.includes(event.event_type)) return;
     if (!formats.includes(event.format)) return;
