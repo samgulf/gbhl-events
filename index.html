@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GBHL Events Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    #map { height: 90vh; }
+    .marker-singles { border-radius: 50%; }
+    .marker-doubles { border-radius: 0%; }
+    .leaflet-popup-content { font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<div class="container-fluid p-3">
+  <h2 class="mb-3">Great British Hobbit League Events Map</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="mb-2">
+        <input type="text" id="searchBox" class="form-control" placeholder="Search by event name..." />
+      </div>
+      <div class="mb-2">
+        <label><input type="checkbox" class="filter-type" value="GBHL100" checked> GBHL100</label><br>
+        <label><input type="checkbox" class="filter-type" value="GBHL90" checked> GBHL90</label><br>
+        <label><input type="checkbox" class="filter-type" value="GBHL80" checked> GBHL80</label><br>
+        <label><input type="checkbox" class="filter-type" value="Other" checked> Other</label>
+      </div>
+      <div class="mb-2">
+        <label><input type="checkbox" class="filter-format" value="Singles" checked> Singles</label><br>
+        <label><input type="checkbox" class="filter-format" value="Doubles" checked> Doubles</label>
+      </div>
+      <div class="mb-2">
+        <label><input type="checkbox" class="filter-duration" value="One day" checked> One day</label><br>
+        <label><input type="checkbox" class="filter-duration" value="Two days" checked> Two days</label>
+      </div>
+      <div class="mb-2">
+        <label><input type="checkbox" id="filterFutureOnly" checked> Show future events only</label>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+const map = L.map('map').setView([54, -2], 6);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+const markerGroup = L.layerGroup().addTo(map);
+
+fetch('data/events.json')
+  .then(res => res.json())
+  .then(data => {
+    window.eventData = data;
+    window.allMarkers = [];
+    renderMarkers();
+  });
+
+function renderMarkers() {
+  markerGroup.clearLayers();
+  const now = new Date();
+  const types = getCheckedValues('filter-type');
+  const formats = getCheckedValues('filter-format');
+  const durations = getCheckedValues('filter-duration');
+  const showFutureOnly = document.getElementById('filterFutureOnly').checked;
+  const searchQuery = document.getElementById('searchBox').value.toLowerCase();
+
+  const fuse = new Fuse(window.eventData, { keys: ['event_name'], threshold: 0.3 });
+  const filteredData = searchQuery ? fuse.search(searchQuery).map(r => r.item) : window.eventData;
+
+  filteredData.forEach(event => {
+    const start = new Date(event.start_date);
+    if (showFutureOnly && start < now) return;
+    if (!types.includes(event.event_type)) return;
+    if (!formats.includes(event.format)) return;
+    if (!durations.includes(event.event_duration)) return;
+
+    const jitter = Math.random() * 0.02 - 0.01;
+    const lat = event.lat + jitter;
+    const lon = event.lon + jitter;
+    const color = {
+      GBHL100: 'red',
+      GBHL90: 'gold',
+      GBHL80: 'blue',
+      Other: 'gray'
+    }[event.event_type];
+
+    const shape = event.format === 'Doubles' ? 'marker-doubles' : 'marker-singles';
+    const marker = L.circleMarker([lat, lon], {
+      radius: 8,
+      color,
+      weight: 1,
+      fillColor: color,
+      fillOpacity: 0.8,
+      className: shape
+    }).bindPopup(
+      `<strong>${event.event_name}</strong><br>
+       ${event.start_date} to ${event.end_date}<br>
+       ${event.region} - ${event.location}<br>
+       Format: ${event.format}<br>
+       Duration: ${event.event_duration}<br>
+       Type: ${event.event_type}<br>
+       Organizer: ${event.organizer}<br>
+       <a href="${event.link}" target="_blank">Event Link</a>`
+    );
+
+    marker.addTo(markerGroup);
+    window.allMarkers.push(marker);
+  });
+}
+
+function getCheckedValues(className) {
+  return [...document.querySelectorAll(`.${className}:checked`)].map(cb => cb.value);
+}
+
+document.querySelectorAll('input').forEach(el => {
+  el.addEventListener('input', () => renderMarkers());
+});
+</script>
+</body>
+</html>
