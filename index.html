@@ -78,9 +78,10 @@ fetch('data/events.json')
   return new Date(date.getFullYear(), date.getMonth(), date.getDate());
   }
 
-  function renderMarkers() {
+function renderMarkers() {
   markerGroup.clearLayers();
   const now = stripTime(new Date());
+  console.log("Now (stripped):", now);
   const types = getCheckedValues('filter-type');
   const formats = getCheckedValues('filter-format');
   const durations = getCheckedValues('filter-duration');
@@ -90,7 +91,13 @@ fetch('data/events.json')
   // Step 1: Apply filtering (not search yet)
   let filteredData = window.eventData.filter(event => {
     const start = stripTime(new Date(event.start_date));
-    if (showFutureOnly && start < now) return false;
+    // DEBUG LOGGING
+    if (isNaN(start)) {
+      console.warn("Invalid date:", event.start_date, event.event_name);
+      return false;
+    }
+
+    if (showFutureOnly && (start < now)) return false;
     if (!types.includes(event.event_type)) return false;
     if (!formats.includes(event.format)) return false;
     if (!durations.includes(event.event_duration)) return false;
