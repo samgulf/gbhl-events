@@ -101,12 +101,8 @@ function renderMarkers() {
     if (!types.includes(event.event_type)) return false;
     if (!formats.includes(event.format)) return false;
     if (!durations.includes(event.event_duration)) return false;
+    if (isNaN(parseFloat(event.lat)) || isNaN(parseFloat(event.lon))) return false;
 
-    if (isNaN(event.lat) || isNaN(event.lon)) {
-    console.warn("Skipping marker with invalid coords:", event.event_name, event.lat, event.lon);
-    return false;
-    }
-    
     return true;
   });
 
