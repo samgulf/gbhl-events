@@ -6,10 +6,20 @@
   <title>GBHL Events Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
   <style>
     #map { height: 90vh; }
-    .marker-singles { border-radius: 50%; }
-    .marker-doubles { border-radius: 0%; }
+    .marker-singles div {
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+    }
+    .marker-doubles div {
+      border-radius: 0%;
+      width: 12px;
+      height: 12px;
+    }
     .leaflet-popup-content { font-size: 0.9rem; }
   </style>
 </head>
@@ -47,13 +57,14 @@
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 <script>
 const map = L.map('map').setView([54, -2], 6);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const markerGroup = L.layerGroup().addTo(map);
+const markerGroup = L.markerClusterGroup().addTo(map);
 
 fetch('data/events.json')
   .then(res => res.json())
@@ -75,62 +86,30 @@ function renderMarkers() {
   const fuse = new Fuse(window.eventData, { keys: ['event_name'], threshold: 0.3 });
   const filteredData = searchQuery ? fuse.search(searchQuery).map(r => r.item) : window.eventData;
 
-  console.log("Rendering", filteredData.length, "events");
-
-filteredData.forEach(event => {
-  const start = new Date(event.start_date);
-  const now = new Date();
-
-  // if (document.getElementById('filterFutureOnly').checked && start < now) {
-  //   console.log("Skipping past event:", event.event_name);
-  //   return;
-  // }
-
-  if (!getCheckedValues('filter-type').includes(event.event_type)) {
-    console.log("Skipping type:", event.event_type);
-    return;
-  }
-
-  if (!getCheckedValues('filter-format').includes(event.format)) {
-    console.log("Skipping format:", event.format);
-    return;
-  }
-
-  if (!getCheckedValues('filter-duration').includes(event.event_duration)) {
-    console.log("Skipping duration:", event.event_duration);
-    return;
-  }
-
-  if (isNaN(event.lat) || isNaN(event.lon)) {
-    console.log("Skipping invalid coords:", event.event_name, event.lat, event.lon);
-    return;
-  }
-
-  // console.log("✔ Showing:", event.event_name);
-
-  //   if (showFutureOnly && start < now) return;
+  filteredData.forEach(event => {
+    const start = new Date(event.start_date);
+    if (showFutureOnly && start < now) return;
     if (!types.includes(event.event_type)) return;
     if (!formats.includes(event.format)) return;
     if (!durations.includes(event.event_duration)) return;
 
-    const jitter = Math.random() * 0.02 - 0.01;
-    const lat = event.lat + jitter;
-    const lon = event.lon + jitter;
+    const lat = parseFloat(event.lat);
+    const lon = parseFloat(event.lon);
     const color = {
       GBHL100: 'red',
       GBHL90: 'gold',
       GBHL80: 'blue',
-      Other: 'gray'
+      Other: 'green'
     }[event.event_type];
 
-    const shape = event.format === 'Doubles' ? 'marker-doubles' : 'marker-singles';
-    const marker = L.circleMarker([lat, lon], {
-      radius: 8,
-      color,
-      weight: 1,
-      fillColor: color,
-      fillOpacity: 0.8,
-      className: shape
+    const shapeClass = event.format === 'Doubles' ? 'marker-doubles' : 'marker-singles';
+
+    const marker = L.marker([lat, lon], {
+      icon: L.divIcon({
+        className: shapeClass,
+        html: `<div style="background:${color}"></div>`,
+        iconSize: [12, 12],
+      })
     }).bindPopup(
       `<strong>${event.event_name}</strong><br>
        ${event.start_date} to ${event.end_date}<br>
@@ -142,7 +121,7 @@ filteredData.forEach(event => {
        <a href="${event.link}" target="_blank">Event Link</a>`
     );
 
-    marker.addTo(markerGroup);
+    markerGroup.addLayer(marker);
     window.allMarkers.push(marker);
   });
 }
