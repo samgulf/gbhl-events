@@ -74,7 +74,7 @@ fetch('data/events.json')
     renderMarkers();
   });
 
-function renderMarkers() {
+  function renderMarkers() {
   markerGroup.clearLayers();
   const now = new Date();
   const types = getCheckedValues('filter-type');
@@ -83,16 +83,24 @@ function renderMarkers() {
   const showFutureOnly = document.getElementById('filterFutureOnly').checked;
   const searchQuery = document.getElementById('searchBox').value.toLowerCase();
 
-  const fuse = new Fuse(window.eventData, { keys: ['event_name'], threshold: 0.3 });
-  const filteredData = searchQuery ? fuse.search(searchQuery).map(r => r.item) : window.eventData;
-
-  filteredData.forEach(event => {
+  // Step 1: Apply filtering (not search yet)
+  let filteredData = window.eventData.filter(event => {
     const start = new Date(event.start_date);
-    if (showFutureOnly && start < now) return;
-    if (!types.includes(event.event_type)) return;
-    if (!formats.includes(event.format)) return;
-    if (!durations.includes(event.event_duration)) return;
+    if (showFutureOnly && start < now) return false;
+    if (!types.includes(event.event_type)) return false;
+    if (!formats.includes(event.format)) return false;
+    if (!durations.includes(event.event_duration)) return false;
+    return true;
+  });
 
+  // Step 2: Apply fuzzy search if there’s a query
+  if (searchQuery) {
+    const fuse = new Fuse(filteredData, { keys: ['event_name'], threshold: 0.3 });
+    filteredData = fuse.search(searchQuery).map(r => r.item);
+  }
+
+  // Step 3: Render markers
+  filteredData.forEach(event => {
     const lat = parseFloat(event.lat);
     const lon = parseFloat(event.lon);
     const color = {
