@@ -3,7 +3,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-01-04,2025-01-05,Into The West,Matt King,SW,Cardiff,Singles,GBHL100,https://fb.me/e/5zaqaw53a,51.4816546,-3.1791934,"Cardiff, UK",Weekend
 2025-02-01,2025-02-02,City of Steel,Ali King,N.Eng,Sheffield,Singles,GBHL100,,53.3806626,-1.4702278,"Sheffield, UK",Weekend
 2025-03-01,2025-03-02,Defence of North Bristol,David Clubley,SW,Bristol,Doubles,GBHL90,https://fb.me/e/ahB6QwPbj,51.4538022,-2.5972985,"Bristol, UK",Weekend
-2025-01-04,2025-01-04,A Merrier World,Tim Elwess,C,Lincoln,Unknown,GBHL90,https://fb.me/e/801JX0b3c,53.2293545,-0.5404819,"Lincoln, UK",Saturday
+2025-01-04,2025-01-04,A Merrier World,Tim Elwess,C,Lincoln,Singles,GBHL90,https://fb.me/e/801JX0b3c,53.2293545,-0.5404819,"Lincoln, UK",Saturday
 2025-02-01,2025-02-02,Go Back To The Abyss,Scott Hensford,SE,High Wycombe,Singles,GBHL90,,51.6317449,-0.75596,"High Wycombe, UK",Weekend
 2025-03-01,2025-03-01,Point of Might,Ross Wolstenholme,Sc & Ire,Falkirk,Singles,GBHL90,https://fb.me/e/4d3gvJUbJ,55.9991959,-3.784376,"Falkirk, UK",Saturday
 2025-03-02,2025-03-02,A Ranger Caught Off His Guard,Dale Groves,C,Walsall,Singles,GBHL90,https://fb.me/e/gpWPvpJh7,52.5847949,-1.9822687,"Walsall, UK",Sunday
@@ -52,7 +52,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-04-13,2025-04-13,Swindon Teams Duel,Tom Pattison,SW,Swindon,Team,GBHL90,https://fb.me/e/2D5gv2iC4,51.5615327,-1.7854322,"Swindon, UK",Sunday
 2025-05-11,2025-05-11,Perfectly Balanced...,Sonny Hunter,C,Bedworth,Singles,GBHL90,https://fb.me/e/5hicxygPt,52.4792826,-1.4663202,"Bedworth, UK",Sunday
 2025-06-07,2025-06-08,The Great North Rhun,Jake Robson,N.Eng,Newcastle,Singles,GBHL100,https://fb.me/e/4Bb3oFXRD,54.9738474,-1.6131572,"Newcastle, UK",Weekend
-2025-04-12,2025-04-12,Kill Bill 2: Second Breakfast,Jack Brawley,Sc & Ire,Glasgow,Unknown,GBHL80,,55.861155,-4.2501687,"Glasgow, UK",Saturday
+2025-04-12,2025-04-12,Kill Bill 2: Second Breakfast,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL80,,55.861155,-4.2501687,"Glasgow, UK",Saturday
 2025-05-11,2025-05-11,Double Trouble,Lian Smith,SW,Worcester,Singles,GBHL80,https://fb.me/e/2pkJbi0mL,52.1911849,-2.2206585,"Worcester, UK",Sunday
 2025-06-07,2025-06-07,The Expansion of Fangorn,Scott Perry,C,Melton Mowbray,Singles,GBHL80,https://fb.me/e/3k9WlbEjy,52.7645663,-0.8868896,"Melton Mowbray, UK",Saturday
 2025-05-11,2025-05-11,Where is the Horse?,Natalie Pearson,N.Eng,Sheffield,Singles,GBHL90,https://fb.me/e/5XAHAuyL9,53.3806626,-1.4702278,"Sheffield, UK",Sunday
@@ -136,7 +136,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-10-04,2025-10-04,Bastion of Middle Earth,Adam Donohoe,SE,Basingstoke,Singles,GBHL80,,51.262826,-1.0861976,"Basingstoke, UK",Saturday
 2025-12-06,2025-12-07,Treasures of Erebor,Callum Slater,SE,Havant,Singles,GBHL80,,50.8519351,-0.9821263,"Havant, UK",Weekend
 2025-10-11,2025-10-12,Lord of the Imps,Harry Parkhill,C,Lincoln,Singles,GBHL100,,53.2293545,-0.5404819,"Lincoln, UK",Weekend
-2025-11-08,2025-11-08,Middle earth Mega Maelstrom,Chris Ryder,SE,Reading,Unknown,GBHL90,,51.4514953,-0.9836342,"Reading, UK",Saturday
+2025-11-08,2025-11-08,Middle earth Mega Maelstrom,Chris Ryder,SE,Reading,Singles,GBHL90,,51.4514953,-0.9836342,"Reading, UK",Saturday
 2025-11-09,2025-11-09,Where was Bill the Pony...,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL90,https://fb.me/e/KaVAVnWUP,54.5760419,-1.2344047,"Middlesbrough, UK",Sunday
 2025-12-13,2025-12-14,GBHL League Finale,GBHL Management Committee,Unknown,Location TBC,Singles,GBHL100,,,,"Location TBC, UK",Weekend
 2025-10-11,2025-10-11,Curse of the Anduin,Garry Sharp,C,Hinckley,Singles,GBHL90,https://fb.me/e/hAp0tYlhC,52.5410591,-1.3729379,"Hinckley, UK",Saturday
