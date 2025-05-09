@@ -10,16 +10,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
   <style>
     #map { height: 90vh; }
-    .marker-singles div {
-      border-radius: 50%;
-      width: 12px;
-      height: 12px;
-    }
-    .marker-doubles div {
-      border-radius: 0%;
-      width: 12px;
-      height: 12px;
-    }
+    .marker-singles { border-radius: 50%; }
+    .marker-doubles { border-radius: 0%; }
     .leaflet-popup-content { font-size: 0.9rem; }
   </style>
 </head>
@@ -42,8 +34,10 @@
         <label><input type="checkbox" class="filter-format" value="Doubles" checked> Doubles</label>
       </div>
       <div class="mb-2">
-        <label><input type="checkbox" class="filter-duration" value="One day" checked> One day</label><br>
-        <label><input type="checkbox" class="filter-duration" value="Two days" checked> Two days</label>
+        <label><input type="checkbox" class="filter-duration" value="Saturday" checked> Saturday</label><br>
+        <label><input type="checkbox" class="filter-duration" value="Sunday" checked> Sunday</label>
+        <label><input type="checkbox" class="filter-duration" value="Weekend" checked> Weekend</label><br>
+        <label><input type="checkbox" class="filter-duration" value="Other" checked> Other</label>        
       </div>
       <div class="mb-2">
         <label><input type="checkbox" id="filterFutureOnly" checked> Show future events only</label>
@@ -56,15 +50,16 @@
 </div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script>
 const map = L.map('map').setView([54, -2], 6);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const markerGroup = L.markerClusterGroup().addTo(map);
+const markerGroup = L.markerClusterGroup();
+map.addLayer(markerGroup);
 
 fetch('data/events.json')
   .then(res => res.json())
@@ -81,56 +76,75 @@ fetch('data/events.json')
 function renderMarkers() {
   markerGroup.clearLayers();
   const now = stripTime(new Date());
-  console.log("Now (stripped):", now);
   const types = getCheckedValues('filter-type');
   const formats = getCheckedValues('filter-format');
   const durations = getCheckedValues('filter-duration');
   const showFutureOnly = document.getElementById('filterFutureOnly').checked;
   const searchQuery = document.getElementById('searchBox').value.toLowerCase();
 
-  // Step 1: Apply filtering (not search yet)
-  let filteredData = window.eventData.filter(event => {
+  const fuse = new Fuse(window.eventData, { keys: ['event_name'], threshold: 0.3 });
+  const filteredData = searchQuery ? fuse.search(searchQuery).map(r => r.item) : window.eventData;
+
+  console.log("Rendering", filteredData.length, "events");
+
+  filteredData.forEach(event => {
     const start = stripTime(new Date(event.start_date));
-    // DEBUG LOGGING
     if (isNaN(start)) {
       console.warn("Invalid date:", event.start_date, event.event_name);
       return false;
     }
 
-    if (showFutureOnly && (start < now)) return false;
-    if (!types.includes(event.event_type)) return false;
-    if (!formats.includes(event.format)) return false;
-    if (!durations.includes(event.event_duration)) return false;
-    if (isNaN(parseFloat(event.lat)) || isNaN(parseFloat(event.lon))) return false;
+    if (document.getElementById('filterFutureOnly').checked && start < now) {
+        console.log("Skipping past event:", event.event_name);
+        return;
+    }
 
-    return true;
-  });
+    if (!getCheckedValues('filter-type').includes(event.event_type)) {
+        console.log("Skipping type:", event.event_name, event.event_type);
+        return;
+    }
 
-  // Step 2: Apply fuzzy search if there’s a query
-  if (searchQuery) {
-    const fuse = new Fuse(filteredData, { keys: ['event_name'], threshold: 0.3 });
-    filteredData = fuse.search(searchQuery).map(r => r.item);
+    if (!getCheckedValues('filter-format').includes(event.format)) {
+        console.log("Skipping format:", event.event_name, event.event_format);
+        return;
+    }
+
+    if (!getCheckedValues('filter-duration').includes(event.event_duration)) {
+        console.log("Skipping duration:", event.event_name, event.event_duration);
+        return;
+    }
+
+  if (event.lat == null || event.lon == null || isNaN(parseFloat(event.lat)) || isNaN(parseFloat(event.lon))) {
+      console.log("Skipping invalid coords:", event.event_name, event.lat, event.lon);
+      return;
   }
 
-  // Step 3: Render markers
-  filteredData.forEach(event => {
-    const lat = parseFloat(event.lat);
-    const lon = parseFloat(event.lon);
+    //console.log("✔ Showing:", event.event_name);
+
+    // const start = new Date(event.start_date);
+    if (showFutureOnly && start < now) return;
+    if (!types.includes(event.event_type)) return;
+    if (!formats.includes(event.format)) return;
+    if (!durations.includes(event.event_duration)) return;
+
+    // const jitter = Math.random() * 0.02 - 0.01;
+    // const lat = event.lat + jitter;
+    // const lon = event.lon + jitter;
     const color = {
       GBHL100: 'red',
       GBHL90: 'gold',
       GBHL80: 'blue',
-      Other: 'green'
+      Other: 'gray'
     }[event.event_type];
 
-    const shapeClass = event.format === 'Doubles' ? 'marker-doubles' : 'marker-singles';
-
-    const marker = L.marker([lat, lon], {
-      icon: L.divIcon({
-        className: shapeClass,
-        html: `<div style="background:${color}"></div>`,
-        iconSize: [12, 12],
-      })
+    const shape = event.format === 'Doubles' ? 'marker-doubles' : 'marker-singles';
+    const marker = L.circleMarker([event.lat, event.lon], {
+      radius: 8,
+      color,
+      weight: 1,
+      fillColor: color,
+      fillOpacity: 0.8,
+      className: shape
     }).bindPopup(
       `<strong>${event.event_name}</strong><br>
        ${event.start_date} to ${event.end_date}<br>
@@ -142,7 +156,7 @@ function renderMarkers() {
        <a href="${event.link}" target="_blank">Event Link</a>`
     );
 
-    markerGroup.addLayer(marker);
+    marker.addTo(markerGroup);
     window.allMarkers.push(marker);
   });
 }
