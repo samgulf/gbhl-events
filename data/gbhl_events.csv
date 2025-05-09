@@ -49,7 +49,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-05-03,2025-05-03,Unfurl The Banners of War,Tom Gilbert,SE,Colchester Essex,Singles,GBHL80,,51.8896903,0.8994651,"Colchester Essex, UK",Saturday
 2025-05-03,2025-05-03,Side By Side With A Friend?,James Donovan,SW,Abergevanny,Doubles,GBHL90,https://fb.me/e/F5I4c88dI,,,"Abergevanny, UK",Saturday
 2025-04-12,2025-04-12,Best Bit of the Book That!,Dale Groves,C,Walsall,Doubles,GBHL90,https://fb.me/e/2YjuPxmsO,52.5847949,-1.9822687,"Walsall, UK",Saturday
-2025-04-13,2025-04-13,Swindon Teams Duel,Tom Pattison,SW,Swindon,Doubles,GBHL90,https://fb.me/e/2D5gv2iC4,51.5615327,-1.7854322,"Swindon, UK",Sunday
+2025-04-13,2025-04-13,Swindon Teams Duel,Tom Pattison,SW,Swindon,Team,GBHL90,https://fb.me/e/2D5gv2iC4,51.5615327,-1.7854322,"Swindon, UK",Sunday
 2025-05-11,2025-05-11,Perfectly Balanced...,Sonny Hunter,C,Bedworth,Singles,GBHL90,https://fb.me/e/5hicxygPt,52.4792826,-1.4663202,"Bedworth, UK",Sunday
 2025-06-07,2025-06-08,The Great North Rhun,Jake Robson,N.Eng,Newcastle,Singles,GBHL100,https://fb.me/e/4Bb3oFXRD,54.9738474,-1.6131572,"Newcastle, UK",Weekend
 2025-04-12,2025-04-12,Kill Bill 2: Second Breakfast,Jack Brawley,Sc & Ire,Glasgow,Unknown,GBHL80,,55.861155,-4.2501687,"Glasgow, UK",Saturday
@@ -83,14 +83,14 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-05-31,2025-05-31,Shadow & Flame Returns,James Hayman,SW,Newport,Doubles,GBHL90,https://fb.me/e/hRK86aAR0,51.5882332,-2.9974967,"Newport, UK",Saturday
 2025-06-28,2025-06-29,Tis A Gathering,Harry Parkhill,C,Lincoln,Singles,GBHL80,https://fb.me/e/5t7zIK8PC,53.2293545,-0.5404819,"Lincoln, UK",Weekend
 2025-06-28,2025-06-28,Last Alliance,Alan Liddle,Sc & Ire,Stirling,Singles,GBHL90,https://fb.me/e/5q3pUhVGu,56.1181242,-3.9360012,"Stirling, UK",Saturday
-2025-07-05,2025-07-05,You Don't Have Any Friends...,Dale Groves,C,Walsall,Doubles,GBHL80,https://fb.me/e/5fOadLoqy,52.5847949,-1.9822687,"Walsall, UK",Saturday
+2025-07-05,2025-07-05,You Don't Have Any Friends...,Dale Groves,C,Walsall,Team,GBHL80,https://fb.me/e/5fOadLoqy,52.5847949,-1.9822687,"Walsall, UK",Saturday
 2025-07-06,2025-07-06,Where Legends Are Made,Charles Sims,N.Eng,Preston,Singles,GBHL80,,53.7593363,-2.6992717,"Preston, UK",Sunday
 2025-08-02,2025-08-03,One Ring to Rule the Bubbles,Matt King,SW,Bath,Singles,GBHL100,https://fb.me/e/2AB2wnJE4,51.3813864,-2.3596963,"Bath, UK",Weekend
 2025-09-06,2025-09-07,Of Dice And Men,Will Champion,N.Eng,Ripon,Singles,GBHL100,,54.1362169,-1.5238006,"Ripon, UK",Weekend
 2025-07-05,2025-07-06,Defence of the Hornburg,Ross Wolstenholme,Sc & Ire,Falkirk,Singles,GBHL90,https://fb.me/e/39KwcvzTW,55.9991959,-3.784376,"Falkirk, UK",Weekend
 2025-08-02,2025-08-03,Leeds by example,Adam Bird,N.Eng,Leeds,Singles,GBHL80,https://fb.me/e/5I4PrtZiW,53.7974185,-1.5437941,"Leeds, UK",Weekend
 2025-09-06,2025-09-07,Bonds of Fellowship V,Callum Slater,SE,Havant,Singles,GBHL90,,50.8519351,-0.9821263,"Havant, UK",Weekend
-2025-07-06,2025-07-06,Blood and Glory,Jordan Riley,SW,Swindon,Doubles,GBHL80,https://fb.me/e/4sS5LBuds,51.5615327,-1.7854322,"Swindon, UK",Sunday
+2025-07-06,2025-07-06,Blood and Glory,Jordan Riley,SW,Swindon,Team,GBHL80,https://fb.me/e/4sS5LBuds,51.5615327,-1.7854322,"Swindon, UK",Sunday
 2025-08-02,2025-08-02,Line of Durin,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL90,,55.861155,-4.2501687,"Glasgow, UK",Saturday
 2025-09-06,2025-09-06,...Share An Adventure,Fraser Gillespie,Sc & Ire,Glasgow,Singles,GBHL80,,55.861155,-4.2501687,"Glasgow, UK",Saturday
 2025-09-07,2025-09-07,Battle of BexBree,Kieran McGrann,SE,Bexley,Singles,GBHL80,,51.4416793,0.150488,"Bexley, UK",Sunday
@@ -99,9 +99,9 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-09-13,2025-09-13,Cheese is back on the menu boys!,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL80,https://fb.me/e/4n6YjLo8t,54.5760419,-1.2344047,"Middlesbrough, UK",Saturday
 2025-09-14,2025-09-14,"Fly, You Fools!",Charles Sims,N.Eng,Preston,Singles,GBHL90,,53.7593363,-2.6992717,"Preston, UK",Sunday
 2025-07-12,2025-07-12,An Unexpected Hero,Ash Lumb,C,Bedworth,Singles,GBHL90,https://fb.me/e/54RwJw8YI,52.4792826,-1.4663202,"Bedworth, UK",Saturday
-2025-07-13,2025-07-13,The Enemy Of My Enemy,Natalie Pearson,N.Eng,Sheffield,Doubles,GBHL80,https://fb.me/e/9nNsoMlvc,53.3806626,-1.4702278,"Sheffield, UK",Sunday
+2025-07-13,2025-07-13,The Enemy Of My Enemy,Natalie Pearson,N.Eng,Sheffield,Team,GBHL80,https://fb.me/e/9nNsoMlvc,53.3806626,-1.4702278,"Sheffield, UK",Sunday
 2025-08-10,2025-08-10,Chaos In Bristol,David Clubley,SW,Bristol,Singles,GBHL80,https://fb.me/e/33DSIxJgY,51.4538022,-2.5972985,"Bristol, UK",Sunday
-2025-09-13,2025-09-13,Let this be the hour we draw swords,Richard Johnson,SW,Gloucester,Doubles,GBHL90,https://fb.me/e/7XGlEF7cw,51.8653705,-2.2458192,"Gloucester, UK",Saturday
+2025-09-13,2025-09-13,Let this be the hour we draw swords,Richard Johnson,SW,Gloucester,Team,GBHL90,https://fb.me/e/7XGlEF7cw,51.8653705,-2.2458192,"Gloucester, UK",Saturday
 2025-07-12,2025-07-12,...Gondor Needs No Gully,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL90,https://fb.me/e/57K3FZZrJ,54.5760419,-1.2344047,"Middlesbrough, UK",Saturday
 2025-07-12,2025-07-12,The Fall of Khazad Dundee,Duncan Peacock,Sc & Ire,Dundee,Singles,GBHL90,https://fb.me/e/7n5OivRhk,56.4605938,-2.97019,"Dundee, UK",Saturday
 2025-07-19,2025-07-20,The Guardians Call to...,Dewi Evans,SW,Chippenham,Singles,GBHL100,https://fb.me/e/hPwq4MRYV,51.4587621,-2.1159032,"Chippenham, UK",Weekend
@@ -145,7 +145,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-10-18,2025-10-19,Numbers Beyond Reckoning,Connor Faulkner,Sc & Ire,Bangor,Singles,GBHL100,,53.2277163,-4.1268822,"Bangor, UK",Weekend
 2025-11-15,2025-11-15,Turning Point,Ash Lumb,C,Bedwroth,Singles,GBHL90,https://fb.me/e/EVkFe3QFU,,,"Bedwroth, UK",Saturday
 2025-11-16,2025-11-16,Two Towers,Charles Sims,N.Eng,Preston,Singles,GBHL90,,53.7593363,-2.6992717,"Preston, UK",Sunday
-2025-10-18,2025-10-19,7th City Collectables MESBG T Event,Will Champion,C,Nottingham,Doubles,GBHL90,,52.9534193,-1.1496461,"Nottingham, UK",Weekend
+2025-10-18,2025-10-19,7th City Collectables MESBG T Event,Will Champion,C,Nottingham,Team,GBHL90,,52.9534193,-1.1496461,"Nottingham, UK",Weekend
 2025-11-15,2025-11-15,WAR of the Ring,Steve Clubley,SE,Farnborough,Singles,GBHL90,,51.2918693,-0.7539836,"Farnborough, UK",Saturday
 2025-11-16,2025-11-16,WAR of the Ring Doubles,Steve Clubley,SE,Farnborough,Doubles,GBHL80,,51.2918693,-0.7539836,"Farnborough, UK",Sunday
 2025-10-19,2025-10-19,Arnorian Werewolf in Lindon,Henry Brittain,SW,Swindon,Singles,GBHL90,https://fb.me/e/hLXUDVT3n,51.5615327,-1.7854322,"Swindon, UK",Sunday
