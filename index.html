@@ -115,7 +115,7 @@ function renderMarkers() {
     }
 
   if (event.lat == null || event.lon == null || isNaN(parseFloat(event.lat)) || isNaN(parseFloat(event.lon))) {
-      console.log("Skipping invalid coords:", event.event_name, event.lat, event.lon);
+      console.log("Skipping invalid coords:", event.event_name, event.location, event.lat, event.lon);
       return;
   }
 
