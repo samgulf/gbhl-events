@@ -137,7 +137,7 @@ function renderMarkers() {
       Other: 'gray'
     }[event.event_type];
 
-    const shape = event.format === 'Doubles' ? 'marker-doubles' : 'marker-singles';
+    const shape = event.format === 'Singles' ? 'marker-singles' : 'marker-doubles';
     const marker = L.circleMarker([event.lat, event.lon], {
       radius: 8,
       color,
@@ -147,13 +147,13 @@ function renderMarkers() {
       className: shape
     }).bindPopup(
       `<strong>${event.event_name}</strong><br>
-       ${event.start_date} to ${event.end_date}<br>
-       ${event.region} - ${event.location}<br>
-       Format: ${event.format}<br>
-       Duration: ${event.event_duration}<br>
-       Type: ${event.event_type}<br>
-       Organizer: ${event.organizer}<br>
-       <a href="${event.link}" target="_blank">Event Link</a>`
+      ${event.start_date} to ${event.end_date}<br>
+      ${event.region} - ${event.location}<br>
+      Format: ${event.format}<br>
+      Duration: ${event.event_duration}<br>
+      Type: ${event.event_type}<br>
+      Organizer: ${event.organizer}<br>
+      ${event.link ? `<a href="${event.link}" target="_blank">Event Link</a>` : ''}`
     );
 
     marker.addTo(markerGroup);
