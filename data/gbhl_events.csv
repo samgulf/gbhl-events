@@ -94,8 +94,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-08-03,2025-08-03,What About Second Powder Monkey?,Matt Burns,N.Eng,Huddersfield,Singles,GBHL80,,53.6466645,-1.7822482,"Huddersfield, UK",Sunday
 2025-09-06,2025-09-06,...Share An Adventure,Fraser Gillespie,Sc & Ire,Glasgow,Singles,GBHL80,,55.861155,-4.2501687,"Glasgow, UK",Saturday
 2025-09-07,2025-09-07,Battle of BexBree,Kieran McGrann,SE,Bexley,Singles,GBHL80,,51.4416793,0.150488,"Bexley, UK",Sunday
-2025-08-02,2025-08-02,Three? I Am No Three...,Josh Wheeler,SE,London,Team,GBHL90,,51.4893335,-0.1440551,"London, UK",Saturday
-2025-08-03,2025-08-03,Slightly Less Battle Of Our Time,Giuseppe Bonetti,SE,London,Singles,GBHL90,,51.4893335,-0.1440551,"London, UK",Sunday
+2025-08-02,2025-08-02,Slightly Less Battle Of Our Time,Giuseppe Bonetti,SE,London,Team,GBHL90,,51.4893335,-0.1440551,"London, UK",Saturday
 2025-09-06,2025-09-06,A BIG Autumn Day Out 2,James Harding,SW,Bristol,Singles,GBHL90,,51.4538022,-2.5972985,"Bristol, UK",Saturday
 2025-08-09,2025-08-10,Hampshire Grand Gaming,Paul Marshallsay,SE,Portsmouth,Singles,GBHL80,,50.800031,-1.0906023,"Portsmouth, UK",Weekend
 2025-09-13,2025-09-13,Cheese is back on the menu boys!,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL80,https://fb.me/e/4n6YjLo8t,54.5760419,-1.2344047,"Middlesbrough, UK",Saturday
@@ -120,6 +119,8 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-08-17,2025-08-17,Hope Remains 2025,Jamie Ailano,N.Eng,Sunderland,Singles,GBHL80,https://fb.me/e/3bcyQapOR,54.9058512,-1.3828727,"Sunderland, UK",Sunday
 2025-09-20,2025-09-20,War of the Roses,Louis Aplin,N.Eng,Manchester,Singles,GBHL90,,53.4794892,-2.2451148,"Manchester, UK",Saturday
 2025-09-21,2025-09-21,Kentmoot,Callum Piper,C,Littlebourne,Singles,GBHL90,https://fb.me/e/2X2BP5wX0,51.274001,1.1650888,"Littlebourne, UK",Sunday
+2025-08-16,2025-08-16,Three? I Am No Three...,Josh Wheeler,SE,London,Team,GBHL90,,51.4893335,-0.1440551,"London, UK",Saturday
+2025-08-17,2025-08-17,Deep Down in Swindon Town,Henry Brittain,SE,Swindon,Singles,GBHL80,,51.5615327,-1.7854322,"Swindon, UK",Sunday
 2025-07-26,2025-07-27,Nirnaeth Arnoediad 2025,Michael Bradford,Sc & Ire,Belfast,Singles,GBHL100,,54.5975804,-5.9277097,"Belfast, UK",Weekend
 2025-08-23,2025-08-24,MESBG Mixed Doubles,Will Champion,C,Derby,Doubles,GBHL90,https://fb.me/e/8mfMRw0LS,52.9142235,-1.4719885,"Derby, UK",Weekend
 2025-09-27,2025-09-27,Bilbo's Birthday Bash,Phile Beale & Andy Hamblin,SW,Radstock,Singles,GBHL90,https://fb.me/e/8pMswjCnL,51.2919489,-2.4476231,"Radstock, UK",Saturday
