@@ -109,7 +109,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-09-20,2025-09-21,The Lemon Cup,Ali King & Sam Gratton & Ashley Woolger,SE,Portsmouth ,Singles,GBHL100,https://facebook.com/events/s/the-lemon-cup-2025-gbhl-100-go/3076576585833760/,50.800031,-1.0906023,"Portsmouth , UK",Weekend
 2025-07-19,2025-07-19,The Kingdom of Northlondorien,Pablo Molina,SE,London,Singles,GBHL90,,51.5074456,-0.1277653,"London, UK",Saturday
 2025-08-08,2025-08-08,Chaos In Arda,Ardacon,N.Eng,Manchester,Doubles,GBHL80,,53.4794892,-2.2451148,"Manchester, UK",Other
-2025-08-16,2025-08-16,Three? I Am No Three...,Josh Wheeler,SE,London,Team,GBHL90,,51.4893335,-0.1440551,"London, UK",Saturday
+2025-08-16,2025-08-16,Three? I Am No Three...,Josh Wheeler,SE,London,Team,GBHL80,,51.4893335,-0.1440551,"London, UK",Saturday
 2025-08-17,2025-08-17,There Is No Time. War Is Upon Us!,Ross Wolstenholme,Sc & Ire,Falkirk,Singles,GBHL90,https://fb.me/e/5Gyh0w7yS,55.9991959,-3.784376,"Falkirk, UK",Sunday
 2025-09-20,2025-09-21,Contest of Champions,Tom Pattison,SW,Swindon,Singles,GBHL90,,51.5615327,-1.7854322,"Swindon, UK",Weekend
 2025-08-16,2025-08-16,The Old Alliances Are Dead,Dan Watkins,SW,Abergavenny,Doubles,GBHL80,https://fb.me/e/2ON1icice,51.8213212,-3.0147935,"Abergavenny, UK",Saturday
@@ -147,7 +147,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-10-12,2025-10-12,Rule of Two,Alan Liddle,Sc & Ire,Bathgate,Singles,GBHL90,,55.9009224,-3.6414828,"Bathgate, UK",Sunday
 2025-11-08,2025-11-08,Middle earth Mega Maelstrom,Chris Ryder,SE,Reading,Singles,GBHL90,,51.4514953,-0.9836342,"Reading, UK",Saturday
 2025-11-09,2025-11-09,Where was Bill the Pony...,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL90,https://fb.me/e/KaVAVnWUP,54.5760419,-1.2344047,"Middlesbrough, UK",Sunday
-2025-12-13,2025-12-14,GBHL League Finale,GBHL Management Committee,Unknown,Location TBC,Singles,GBHL100,,,,"Location TBC, UK",Weekend
+2025-12-13,2025-12-14,GBHL League Finale,GBHL Management Committee,N.Eng,Newcastle,Singles,GBHL100,,54.9738474,-1.6131572,"Newcastle, UK",Weekend
 2025-10-11,2025-10-11,Great Deeds of War 2025,Rob Lainchbury,C,Birmingham,Singles,GBHL90,,52.4796992,-1.9026911,"Birmingham, UK",Saturday
 2025-11-08,2025-11-08,The Arena - MESBG Winter Cup,Jake Rogers,SW,Newport,Singles,GBHL90,,51.5882332,-2.9974967,"Newport, UK",Saturday
 2025-11-09,2025-11-09,The Hunt For Gollum,Mark Newham,SW,Swindon,Singles,GBHL80,,51.5615327,-1.7854322,"Swindon, UK",Sunday
@@ -159,7 +159,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-10-18,2025-10-19,7th City Collectables MESBG T Event,Will Champion,C,Nottingham,Team,GBHL90,,52.9534193,-1.1496461,"Nottingham, UK",Weekend
 2025-11-15,2025-11-15,WAR of the Ring,Steve Clubley,SE,Farnborough,Singles,GBHL90,,51.2918693,-0.7539836,"Farnborough, UK",Saturday
 2025-11-16,2025-11-16,WAR of the Ring Doubles,Steve Clubley,SE,Farnborough,Doubles,GBHL80,,51.2918693,-0.7539836,"Farnborough, UK",Sunday
-2025-11-15,2025-11-16,One Does Not Simply Walk Into Hull,Dom Neuner,N.Eng,Hull,Singles,GBHL90,,53.7435722,-0.3394758,"Hull, UK",Weekend
+2025-11-15,2025-11-15,One Does Not Simply Walk Into Hull,Dom Neuner,N.Eng,Hull,Singles,GBHL90,,53.7435722,-0.3394758,"Hull, UK",Saturday
 2025-10-19,2025-10-19,Arnorian Werewolf in Lindon,Henry Brittain,SW,Swindon,Singles,GBHL80,https://fb.me/e/hLXUDVT3n,51.5615327,-1.7854322,"Swindon, UK",Sunday
 2025-11-22,2025-11-23,The Scouring of Stirlingshire,David Reid,Sc & Ire,Stirling,Singles,GBHL100,,56.1181242,-3.9360012,"Stirling, UK",Weekend
 2025-10-25,2025-10-26,Lord of the Imps,Harry Parkhill,C,Lincoln,Singles,GBHL100,,53.2293545,-0.5404819,"Lincoln, UK",Weekend
