@@ -132,37 +132,36 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2025-08-30,2025-08-31,The Return of Anchalagon,Jack Darlingotn,C,Melton Mowbray,Singles,GBHL80,https://fb.me/e/3457FgWp1,52.7645663,-0.8868896,"Melton Mowbray, UK",Weekend
 2025-08-31,2025-08-31,Raise The Banner,Thomas Culleton,SE,High Wycombe,Singles,GBHL80,,51.6317449,-0.75596,"High Wycombe, UK",Sunday
 2025-10-04,2025-10-05,The Rings of Power,Natalie Pearson,N.Eng,Sheffield,Singles,GBHL90,https://fb.me/e/8PaBzAFW9,53.3806626,-1.4702278,"Sheffield, UK",Weekend
-2025-11-01,2025-11-02,Bertacon 2: The Great Bertle of Our Time,Bert Leach,SE,Newbury,Singles,GBHL100,,51.4020243,-1.3242212,"Newbury, UK",Weekend
-2025-12-06,2025-12-07,He Eats It By The Block: Second Helpings,Jack Darlington,C,Melton Mowbray,Singles,GBHL100,,52.7645663,-0.8868896,"Melton Mowbray, UK",Weekend
-2025-10-04,2025-10-04,The Tyne of the Orc has come!,Allan Cameron,N.Eng,Newcastle,Doubles,GBHL80,,54.9738474,-1.6131572,"Newcastle, UK",Saturday
-2025-11-01,2025-11-02,Kelpie Conquest II,Dylan Shepard,Sc & Ire,Keith,Singles,GBHL90,,57.5427292,-2.9523291,"Keith, UK",Weekend
-2025-12-06,2025-12-07,Treasures of Erebor,Callum Slater,SE,Havant,Singles,GBHL80,,50.8519351,-0.9821263,"Havant, UK",Weekend
+2025-11-01,2025-11-02,Bertacon 2: The Great Bertle of Our Time,Bert Leach,SE,Newbury,Singles,GBHL100,https://fb.me/e/50V4amWpC,51.4020243,-1.3242212,"Newbury, UK",Weekend
+2025-12-06,2025-12-07,He Eats It By The Block: Second Helpings,Jack Darlington,C,Melton Mowbray,Singles,GBHL100,https://fb.me/e/503PXqLNO,52.7645663,-0.8868896,"Melton Mowbray, UK",Weekend
+2025-10-04,2025-10-04,The Tyne of the Orc has come!,Allan Cameron,N.Eng,Newcastle,Doubles,GBHL80,https://fb.me/e/5d89yXDza,54.9738474,-1.6131572,"Newcastle, UK",Saturday
+2025-11-01,2025-11-02,Kelpie Conquest II,Dylan Shepard,Sc & Ire,Keith,Singles,GBHL90,https://fb.me/e/jlrXNpzVp,57.5427292,-2.9523291,"Keith, UK",Weekend
+2025-12-06,2025-12-07,Treasures of Erebor,Callum Slater,SE,Havant,Singles,GBHL80,https://fb.me/e/kazCkOnfv,50.8519351,-0.9821263,"Havant, UK",Weekend
 2025-10-04,2025-10-04,Bastion of Middle Earth,Adam Donohoe,SE,Basingstoke,Singles,GBHL80,,51.262826,-1.0861976,"Basingstoke, UK",Saturday
-2025-11-01,2025-11-01,What has it got in its pocketses?,Richard Johnson,SW,Newent,Singles,GBHL80,,51.9236597,-2.3921182,"Newent, UK",Saturday
+2025-11-01,2025-11-01,What has it got in its pocketses?,Richard Johnson,SW,Newent,Singles,GBHL80,https://fb.me/e/50tkhhqE7,51.9236597,-2.3921182,"Newent, UK",Saturday
 2025-11-02,2025-11-02,Mirkwood Mayhem: Flame of Arnor,Isaac Wright,N.Eng,Liverpool,Singles,GBHL90,,53.4071991,-2.99168,"Liverpool, UK",Sunday
 2025-12-06,2025-12-06,Christmas in Middle Earth 2,Fraser Gillespie,Sc & Ire,Glasgow,Singles,GBHL90,,55.861155,-4.2501687,"Glasgow, UK",Saturday
-2025-12-07,2025-12-07,"The Yule Brawl 2, Santa Boogaloo",Tom Pattison,SW,Swindon,Singles,GBHL80,,51.5615327,-1.7854322,"Swindon, UK",Sunday
+2025-12-07,2025-12-07,"The Yule Brawl 2, Santa Boogaloo",Tom Pattison,SW,Swindon,Singles,GBHL80,https://fb.me/e/8c8k8oQIt,51.5615327,-1.7854322,"Swindon, UK",Sunday
 2025-12-06,2025-12-06,Skirmish of the Rings 2025,Joel Parslow,SW,New Milton,Singles,GBHL80,,50.7531006,-1.6550682,"New Milton, UK",Saturday
 2025-10-11,2025-10-11,Fall of Cair Andros,Isaac Wright,N.Eng,Liverpool,Singles,GBHL90,,53.4071991,-2.99168,"Liverpool, UK",Saturday
-2025-10-12,2025-10-12,Rule of Two,Alan Liddle,Sc & Ire,Bathgate,Singles,GBHL90,,55.9009224,-3.6414828,"Bathgate, UK",Sunday
-2025-11-08,2025-11-08,Middle earth Mega Maelstrom,Chris Ryder,SE,Reading,Singles,GBHL90,,51.4514953,-0.9836342,"Reading, UK",Saturday
+2025-10-12,2025-10-12,Rule of Two,Alan Liddle,Sc & Ire,Bathgate,Singles,GBHL90,https://fb.me/e/5qLLoNZ43,55.9009224,-3.6414828,"Bathgate, UK",Sunday
+2025-11-08,2025-11-08,Middle earth Mega Maelstrom,Chris Ryder,SE,Reading,Singles,GBHL90,https://fb.me/e/71KDugTke,51.4514953,-0.9836342,"Reading, UK",Saturday
 2025-11-09,2025-11-09,Where was Bill the Pony...,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL90,https://fb.me/e/KaVAVnWUP,54.5760419,-1.2344047,"Middlesbrough, UK",Sunday
-2025-12-13,2025-12-14,GBHL League Finale,GBHL Management Committee,N.Eng,Newcastle,Singles,GBHL100,,54.9738474,-1.6131572,"Newcastle, UK",Weekend
-2025-10-11,2025-10-11,Great Deeds of War 2025,Rob Lainchbury,C,Birmingham,Singles,GBHL90,,52.4796992,-1.9026911,"Birmingham, UK",Saturday
-2025-11-08,2025-11-08,The Arena - MESBG Winter Cup,Jake Rogers,SW,Newport,Singles,GBHL90,,51.5882332,-2.9974967,"Newport, UK",Saturday
-2025-11-09,2025-11-09,The Hunt For Gollum,Mark Newham,SW,Swindon,Singles,GBHL80,,51.5615327,-1.7854322,"Swindon, UK",Sunday
-2025-10-11,2025-10-11,Valourbowl,Steve Thorley,N.Eng,Stockport,Singles,GBHL80,,53.407901,-2.160243,"Stockport, UK",Saturday
+2025-12-13,2025-12-14,GBHL League Finale,GBHL Management Committee,N.Eng,Newcastle,Singles,GBHL100,https://fb.me/e/Kb4Ji5M5Z,54.9738474,-1.6131572,"Newcastle, UK",Weekend
+2025-10-11,2025-10-11,Great Deeds of War 2025,Rob Lainchbury,C,Birmingham,Singles,GBHL90,https://fb.me/e/3nhxWcgna,52.4796992,-1.9026911,"Birmingham, UK",Saturday
+2025-11-08,2025-11-08,The Arena - MESBG Winter Cup,Jake Rogers,SW,Newport,Singles,GBHL90,https://fb.me/e/3zA6qeVcL,51.5882332,-2.9974967,"Newport, UK",Saturday
+2025-11-09,2025-11-09,The Hunt For Gollum,Mark Newham,SW,Swindon,Singles,GBHL80,https://fb.me/e/3q2ZijtuX,51.5615327,-1.7854322,"Swindon, UK",Sunday
+2025-10-11,2025-10-11,Valourbowl,Steve Thorley,N.Eng,Stockport,Singles,GBHL80,https://fb.me/e/92gpSnXNS,53.407901,-2.160243,"Stockport, UK",Saturday
 2025-11-08,2025-11-08,...Always Follow Your Nose,Dale Groves,C,Walsall,Singles,GBHL90,https://fb.me/e/5UaiuVMT1,52.5847949,-1.9822687,"Walsall, UK",Saturday
-2025-10-18,2025-10-19,Numbers Beyond Reckoning,Connor Faulkner,Sc & Ire,Bangor,Singles,GBHL100,,53.2277163,-4.1268822,"Bangor, UK",Weekend
+2025-10-18,2025-10-19,Numbers Beyond Reckoning,Connor Faulkner,Sc & Ire,Bangor,Singles,GBHL100,https://fb.me/e/6YDT3jqIX,53.2277163,-4.1268822,"Bangor, UK",Weekend
 2025-11-15,2025-11-15,Turning Point,Ash Lumb,C,Bedworth,Singles,GBHL90,https://fb.me/e/EVkFe3QFU,52.4792826,-1.4663202,"Bedworth, UK",Saturday
-2025-11-16,2025-11-16,Two Towers,Charles Sims,N.Eng,Preston,Singles,GBHL90,,53.7593363,-2.6992717,"Preston, UK",Sunday
-2025-10-18,2025-10-19,7th City Collectables MESBG T Event,Will Champion,C,Nottingham,Team,GBHL90,,52.9534193,-1.1496461,"Nottingham, UK",Weekend
-2025-11-15,2025-11-15,WAR of the Ring,Steve Clubley,SE,Farnborough,Singles,GBHL90,,51.2918693,-0.7539836,"Farnborough, UK",Saturday
-2025-11-16,2025-11-16,WAR of the Ring Doubles,Steve Clubley,SE,Farnborough,Doubles,GBHL80,,51.2918693,-0.7539836,"Farnborough, UK",Sunday
-2025-11-15,2025-11-15,One Does Not Simply Walk Into Hull,Dom Neuner,N.Eng,Hull,Singles,GBHL90,,53.7435722,-0.3394758,"Hull, UK",Saturday
+2025-11-16,2025-11-16,WAR of the Ring Doubles,Steve Clubley,SE,Farnborough,Doubles,GBHL80,https://fb.me/e/8oHMYiXCC,51.2918693,-0.7539836,"Farnborough, UK",Sunday
+2025-10-18,2025-10-19,7th City Collectables MESBG T Event,Will Champion,C,Nottingham,Team,GBHL90,https://fb.me/e/6odDHGRaT,52.9534193,-1.1496461,"Nottingham, UK",Weekend
+2025-11-15,2025-11-15,WAR of the Ring,Steve Clubley,SE,Farnborough,Singles,GBHL90,https://fb.me/e/4WrkV0OGp,51.2918693,-0.7539836,"Farnborough, UK",Saturday
 2025-10-19,2025-10-19,Arnorian Werewolf in Lindon,Henry Brittain,SW,Swindon,Singles,GBHL80,https://fb.me/e/hLXUDVT3n,51.5615327,-1.7854322,"Swindon, UK",Sunday
-2025-11-22,2025-11-23,The Scouring of Stirlingshire,David Reid,Sc & Ire,Stirling,Singles,GBHL100,,56.1181242,-3.9360012,"Stirling, UK",Weekend
-2025-10-25,2025-10-26,Lord of the Imps,Harry Parkhill,C,Lincoln,Singles,GBHL100,,53.2293545,-0.5404819,"Lincoln, UK",Weekend
+2025-11-15,2025-11-15,One Does Not Simply Walk Into Hull,Dom Neuner,N.Eng,Hull,Singles,GBHL90,https://fb.me/e/6OMw3d6aO,53.7435722,-0.3394758,"Hull, UK",Saturday
+2025-11-22,2025-11-23,The Scouring of Stirlingshire,David Reid,Sc & Ire,Stirling,Singles,GBHL100,https://fb.me/e/5hWLAcLYK,56.1181242,-3.9360012,"Stirling, UK",Weekend
+2025-10-25,2025-10-26,Lord of the Imps,Harry Parkhill,C,Lincoln,Singles,GBHL100,https://fb.me/e/6xpINTaw8,53.2293545,-0.5404819,"Lincoln, UK",Weekend
 2025-11-22,2025-11-22,A BIG Winter Day Out,James Harding,SW,Bristol,Singles,GBHL90,,51.4538022,-2.5972985,"Bristol, UK",Saturday
-2025-10-25,2025-10-26,Ambush At Ayr,Jamie Moore,Sc & Ire,Ayr,Doubles,GBHL90,,55.4628044,-4.6302502,"Ayr, UK",Weekend
-2025-11-22,2025-11-22,There is Always Hope,Jason Fox,N.Eng,Barnsley,Singles,GBHL80,,53.5527719,-1.4827755,"Barnsley, UK",Saturday
+2025-10-25,2025-10-26,Ambush At Ayr,Jamie Moore,Sc & Ire,Ayr,Doubles,GBHL90,https://fb.me/e/4XrBSOqzW,55.4628044,-4.6302502,"Ayr, UK",Weekend
+2025-11-22,2025-11-22,There is Always Hope,Jason Fox,N.Eng,Barnsley,Singles,GBHL80,https://fb.me/e/8ZzibhRxL,53.5527719,-1.4827755,"Barnsley, UK",Saturday
