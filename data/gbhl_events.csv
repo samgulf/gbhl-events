@@ -32,7 +32,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-02-21,2026-02-21,Lost Relics of the East,James Palmer,SE,Woolpit,Singles,GBHL80,,52.2247689,0.8880944,"Woolpit, UK",Saturday
 2026-02-21,2026-02-21,Echoes of Middle-earth,Cameron Ruairidh,Sc & Ire,Glasgow,Singles,GBHL80,,55.861155,-4.2501687,"Glasgow, UK",Saturday
 2026-03-21,2026-03-21,Stew The Coneys!,Isaac Wright,N.Eng,Liverpool,Singles,GBHL90,,53.4071991,-2.99168,"Liverpool, UK",Saturday
-2026-01-31,2026-01-31,The Hero We Deserve,Allan Cameron,N.Eng,Newacstle,Singles,GBHL80,,,,"Newacstle, UK",Saturday
+2026-01-31,2026-01-31,The Hero We Deserve,Allan Cameron,N.Eng,Newcastle,Singles,GBHL80,,54.9738474,-1.6131572,"Newcastle, UK",Saturday
 2026-02-28,2026-02-01,Defence of North Bristol,David Clubley,SW,Bristol,Singles,GBHL90,,51.4538022,-2.5972985,"Bristol, UK",Weekend
 2026-03-28,2026-03-29,Warhammer World Grand Tournament,Warhammer World Events Team,C,Nottingham,Singles,GBHL90,,52.9534193,-1.1496461,"Nottingham, UK",Weekend
 2026-02-28,2026-02-01,Bonds of Fellowship VI,Callum Slater,SE,Havantl,Singles,GBHL90,,,,"Havantl, UK",Weekend
@@ -46,9 +46,8 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-06-06,2026-06-07,Battle of Clydewater,Brett Knight,Sc & Ire,Bathgate,Singles,GBHL100,,55.9009224,-3.6414828,"Bathgate, UK",Weekend
 2026-04-04,2026-04-05,Kelpie Conquest III,Dylan Shepherd,Sc & Ire,Keith,Singles,GBHL90,,57.5427292,-2.9523291,"Keith, UK",Weekend
 2026-05-02,2026-05-03,Masters of Fate III,Nicky Forsythe,Sc & Ire,Bangor,Singles,GBHL90,,53.2277163,-4.1268822,"Bangor, UK",Weekend
-2026-06-06,2026-06-07,Where is the Horse?,Natalie Pearson,N.Eng,Sheffield,Singles,GBHL90,,53.3806626,-1.4702278,"Sheffield, UK",Weekend
+2026-04-04,2026-04-05,Where is the Horse?,Natalie Pearson,N.Eng,Sheffield,Singles,GBHL90,,53.3806626,-1.4702278,"Sheffield, UK",Weekend
 2026-04-04,2026-04-04,Best Bit of the Book That!,Dale Groves,C,Walsall,Singles,GBHL80,,52.5847949,-1.9822687,"Walsall, UK",Saturday
-2026-05-03,2026-05-03,The Great North Rhún,Jake Robson,N.Eng,Newcastle,Singles,GBHL90,,54.9738474,-1.6131572,"Newcastle, UK",Sunday
 2026-04-10,2026-04-10,Kill Bill 3,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL90,,55.861155,-4.2501687,"Glasgow, UK",Other
 2026-04-11,2026-04-12,Battle for Greenhollow,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL100,,55.861155,-4.2501687,"Glasgow, UK",Weekend
 2026-05-09,2026-05-10,Rings of Men,Will Champion,C,Derby,Singles,GBHL90,,52.9142235,-1.4719885,"Derby, UK",Weekend
@@ -75,6 +74,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-04-25,2026-04-25,"I’ll ‘ave you, Longshanks!!",Richard Johnson,SW,Gloucester,Singles,GBHL90,,51.8653705,-2.2458192,"Gloucester, UK",Saturday
 2026-05-23,2026-05-24,Seven Stones 2026,Damian O'Byrne & Tom Harrison,SE,Twickenham,Singles,GBHL80,,51.4467444,-0.3281887,"Twickenham, UK",Weekend
 2026-06-27,2026-06-28,Don't Be Hasty 2026,Tom Culleton,SE,High Wycmbe,Singles,GBHL90,,,,"High Wycmbe, UK",Weekend
+2026-05-24,2026-05-24,The Great North Rhún,Jake Robson,N.Eng,Newcastle,Singles,GBHL90,,54.9738474,-1.6131572,"Newcastle, UK",Sunday
 2026-06-27,2026-06-27,Fall of Khazad Dundee,Duncan Peacock,Sc & Ire,Dundee,Singles,GBHL90,,56.4605938,-2.97019,"Dundee, UK",Saturday
 2026-05-30,2026-05-30,Treason of Isengard,James Paterson,SE,Daventry,Singles,GBHL80,,52.2578681,-1.1626569,"Daventry, UK",Saturday
 2026-05-31,2026-05-31,Through Thick And Thin,Dewi Evans,SW,Chippenham,Singles,GBHL90,,51.4587621,-2.1159032,"Chippenham, UK",Sunday
@@ -122,7 +122,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-10-04,2026-10-04,What About Elevenses,Olly Drew,SE,Winchester,Singles,GBHL80,,51.0612766,-1.3131692,"Winchester, UK",Sunday
 2026-10-10,2026-10-11,Lord of the Imps,Harry Parkhill,C,Lincoln,Singles,GBHL100,,53.2293545,-0.5404819,"Lincoln, UK",Weekend
 2026-11-07,2026-11-08,Bertacon,Bert Leach,SE,Newbury,Singles,GBHL100,,51.4020243,-1.3242212,"Newbury, UK",Weekend
-2026-11-07,2026-11-07,The Beacons Are Lit!,Jake Rogers,SW,Newport,Singles,GBHL90,,51.5882332,-2.9974967,"Newport, UK",Saturday
+2026-11-07,2026-11-07,Build Me an Army...,Jake Rogers,SW,Newport,Singles,GBHL90,,51.5882332,-2.9974967,"Newport, UK",Saturday
 2026-11-08,2026-11-08,Event Name TBC,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL90,,54.5760419,-1.2344047,"Middlesbrough, UK",Sunday
 2026-10-17,2026-10-18,The Ring Goes South,Callum Slater,SE,Havant,Singles,GBHL90,,50.8519351,-0.9821263,"Havant, UK",Weekend
 2026-11-14,2026-11-15,Scouring of Stirlingshire,David Reid,Sc & Ire,Stirling,Singles,GBHL100,,56.1181242,-3.9360012,"Stirling, UK",Weekend
