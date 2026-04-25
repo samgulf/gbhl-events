@@ -46,13 +46,13 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-04-05,2026-04-05,Fool of a Powder Monkey,Matt Burns,N.Eng,Huddersfield,Singles,GBHL90,,53.6466645,-1.7822482,"Huddersfield, UK",Sunday
 2026-05-02,2026-05-02,The Ollyphaunt Cup 2026,Olly Jackson,SE,London,Singles,GBHL90,,51.5074456,-0.1277653,"London, UK",Saturday
 2026-05-03,2026-05-03,Raid on Westfold,Jordan Riley,SW,Swindon,Singles,GBHL90,,51.5615327,-1.7854322,"Swindon, UK",Sunday
-2026-04-05,2026-04-05,Would You Like A Box?,Kieran McGrann,SE,Bexley,Singles,GBHL80,,51.4416793,0.150488,"Bexley, UK",Sunday
 2026-05-02,2026-05-02,Take Them Head On!,Nick Walker,SE,Portsmouth,Singles,GBHL80,,50.800031,-1.0906023,"Portsmouth, UK",Saturday
 2026-04-10,2026-04-10,Kill Bill 3,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL90,https://fb.me/e/46aNYfsSW,55.861155,-4.2501687,"Glasgow, UK",Other
 2026-04-11,2026-04-12,Battle for Greenhollow,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL100,https://fb.me/e/73tYo5v37,55.861155,-4.2501687,"Glasgow, UK",Weekend
 2026-05-09,2026-05-10,Rings of Men,Will Champion,C,Derby,Singles,GBHL90,,52.9142235,-1.4719885,"Derby, UK",Weekend
 2026-06-13,2026-06-13,Destruction of Fangorn,Scott Perry,C,Leicester,Singles,GBHL80,,52.6362,-1.1331969,"Leicester, UK",Saturday
 2026-04-11,2026-04-11,Burning of the West Country,Phil Beale,SW,Radstock,Singles,GBHL80,https://fb.me/e/j74eTNlnG,51.2919489,-2.4476231,"Radstock, UK",Saturday
+2026-04-12,2026-04-12,Would You Like A Box?,Kieran McGrann,SE,Bexley,Singles,GBHL80,,51.4416793,0.150488,"Bexley, UK",Sunday
 2026-05-09,2026-05-09,Piggin Mayhem,Sean White,SW,Bath,Singles,GBHL80,,51.3813864,-2.3596963,"Bath, UK",Saturday
 2026-05-10,2026-05-10,Event Name TBC,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL90,,54.5760419,-1.2344047,"Middlesbrough, UK",Sunday
 2026-04-11,2026-04-11,The Northern Realms Open,Peter Frame,N.Eng,Necastle-upon-Tyne,Singles,GBHL80,https://fb.me/e/9tNr4VzGu,,,"Necastle-upon-Tyne, UK",Saturday
@@ -104,17 +104,19 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-07-18,2026-07-19,Doom of Our Time,Callum Slater,SE,Havant,Singles,GBHL80,,50.8519351,-0.9821263,"Havant, UK",Weekend
 2026-08-15,2026-08-15,Don't Look To The Summer Sun,Chris Ryder,SE,Reading,Singles,GBHL90,,51.4514953,-0.9836342,"Reading, UK",Saturday
 2026-08-16,2026-08-16,Point of Might,Ross Wolstenholme,Sc & Ire,Falkirk,Singles,GBHL90,,55.9991959,-3.784376,"Falkirk, UK",Sunday
-2026-09-19,2026-09-19,"2 blood, 2 glory!",Jordan Riley,SW,Swindon,Singles,GBHL80,,51.5615327,-1.7854322,"Swindon, UK",Saturday
+2026-09-19,2026-09-19,Blood and Glory!,Jordan Riley,SW,Swindon,Singles,GBHL80,,51.5615327,-1.7854322,"Swindon, UK",Saturday
+2026-07-18,2026-07-18,Kingz Under the Mountain,Bobby Ramsay,N.Eng,Pontefract,Singles,GBHL90,,53.6917422,-1.3105722,"Pontefract, UK",Saturday
 2026-07-19,2026-07-19,Duel of the Blues,Connor Booth,N.Eng,York,Singles,GBHL80,,53.9656579,-1.0743052,"York, UK",Sunday
+2026-09-19,2026-09-19,Kentmoot,Anthony Agius,SE,Canterbury,Singles,GBHL80,,51.2800275,1.0802533,"Canterbury, UK",Saturday
 2026-07-25,2026-07-26,Nirnaeth Arnoediad 2026,Micheal Bradford,Sc & Ire,Belfast,Singles,GBHL100,,54.5975805,-5.9277097,"Belfast, UK",Weekend
 2026-08-22,2026-08-23,The Strider Cup,Kieran Street,SE,London,Singles,GBHL80,,51.5074456,-0.1277653,"London, UK",Weekend
-2026-09-26,2026-09-26,The Lemon Cup,Ashley Woolger,SE,Portsmouth,Singles,GBHL100,,50.800031,-1.0906023,"Portsmouth, UK",Saturday
+2026-09-26,2026-09-26,The Lemon Cup,Ashley Woolger,SE,Portsmouth,Singles,GBHL100,https://fb.me/e/lNiuge95G,50.800031,-1.0906023,"Portsmouth, UK",Saturday
 2026-07-25,2026-07-25,"Keep it secret, Keep it safe...",Sam Johnson,N.Eng,Stockport,Singles,GBHL90,,53.407901,-2.160243,"Stockport, UK",Saturday
 2026-08-22,2026-08-22,Line of Durin 3,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL90,,55.861155,-4.2501687,"Glasgow, UK",Saturday
 2026-09-26,2026-09-26,Look to the East,Duncan Peacock,Sc & Ire,Dundee,Singles,GBHL90,,56.4605938,-2.97019,"Dundee, UK",Saturday
 2026-07-25,2026-07-25,Journey Through The Chiltern Hills,Tom Culleton,SE,High Wycombe,Singles,GBHL80,,51.6317449,-0.75596,"High Wycombe, UK",Saturday
 2026-08-22,2026-08-22,Journey Through The Chiltern Hills,Tom Culleton,SE,High Wycombe,Singles,GBHL80,,51.6317449,-0.75596,"High Wycombe, UK",Saturday
-2026-09-26,2026-09-26,War of the Roses,Louis Aplin,N.Eng,Manchester,Singles,GBHL80,,53.4794892,-2.2451148,"Manchester, UK",Saturday
+2026-09-26,2026-09-26,War of the Roses,Louis Aplin,N.Eng,Manchester,Unknown,GBHL80,,53.4794892,-2.2451148,"Manchester, UK",Saturday
 2026-08-29,2026-08-30,Four Make a Fellowship,Dale Groves,C,Walsall,Singles,GBHL90,,52.5847949,-1.9822687,"Walsall, UK",Weekend
 2026-08-29,2026-08-30,Ambush At Ayr,Jamie Moore,Sc & Ire,Ayr,Singles,GBHL90,,55.4628044,-4.6302502,"Ayr, UK",Weekend
 2026-10-03,2026-10-04,The Rings of Power,Natalie Pearson,Unknown,N.Eng Sheffield,Singles,GBHL90,https://fb.me/e/46Ub2cwEz,53.3082798,-1.374385,"N.Eng Sheffield, UK",Weekend
@@ -140,6 +142,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-11-15,2026-11-15,WARFARE Doubles,Steve Clubley,SE,Farnborough,Singles,GBHL80,,51.2918693,-0.7539836,"Farnborough, UK",Sunday
 2026-10-17,2026-10-18,Kelpie Conquest IV,Dylan Shepherd,Sc & Ire,Keith,Singles,GBHL90,,57.5427292,-2.9523291,"Keith, UK",Weekend
 2026-10-18,2026-10-18,MESBG: 4 Person 500pt Team,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL80,https://fb.me/e/46R7nWYit,54.5760419,-1.2344047,"Middlesbrough, UK",Sunday
+2026-10-18,2026-10-18,Shadow of the Wyre Forest,Joshua Mortimer,C,Kidderminster,Singles,GBHL80,,52.3880787,-2.2478582,"Kidderminster, UK",Sunday
 2026-10-24,2026-10-25,The Ring Goes to South Bristol,David Clubley,SW,Bristol,Singles,GBHL100,,51.4538022,-2.5972985,"Bristol, UK",Weekend
 2026-11-21,2026-11-21,Journey Through The Chiltern Hills,Tom Culleton,SE,High Wycombe,Singles,GBHL80,,51.6317449,-0.75596,"High Wycombe, UK",Saturday
 2026-11-22,2026-11-22,The Pieces Are Moving,Dewi Evans,SW,Chippenham,Singles,GBHL90,,51.4587621,-2.1159032,"Chippenham, UK",Sunday
