@@ -138,7 +138,6 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-11-01,2026-11-01,Battle Brothers Brawl,Ross Wolstenholme,Sc & Ire,Falkirk,Singles,GBHL90,https://fb.me/e/glYpgF3Vp,55.9991959,-3.784376,"Falkirk, UK",Sunday
 2026-10-04,2026-10-04,Union of the Two Towers,James Paterson,Unknown,C- Daventry,Singles,GBHL80,https://fb.me/e/bj1ltHUat,52.2578681,-1.1626569,"C- Daventry, UK",Sunday
 2026-10-10,2026-10-11,Lord of the Imps,Harry Parkhill,C,Lincoln,Singles,GBHL100,https://fb.me/e/9lfs6PVsi,53.2293545,-0.5404819,"Lincoln, UK",Weekend
-2026-11-06,2026-11-06,Bert's Bargain Basement...,Bert Leach,SE,Newbury,Singles,GBHL90,,51.4020243,-1.3242212,"Newbury, UK",Other
 2026-11-07,2026-11-08,"Bertacon 3: The Good, the Bert and the Ugly",Bert Leach,SE,Newbury,Singles,GBHL100,https://fb.me/e/fRrVX6iUt,51.4020243,-1.3242212,"Newbury, UK",Weekend
 2026-12-12,2026-12-12,GBHL League Finale,Bristol,Unknown,SINGLES,Singles,GBHL100,https://fb.me/e/8K5sMxCrd,,,"SINGLES, UK",Saturday
 2026-10-10,2026-10-10,Side By Side With A Friend,Richard Johnson,SW,Newent,Singles,GBHL90,https://fb.me/e/5lqaHwxAT,51.9236597,-2.3921182,"Newent, UK",Saturday
@@ -162,6 +161,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2026-11-21,2026-11-21,Journey Through The Chiltern Hills,Tom Culleton,SE,High Wycombe,Singles,GBHL80,,51.6317449,-0.75596,"High Wycombe, UK",Saturday
 2026-11-22,2026-11-22,The Pieces Are Moving,Dewi Evans,SW,Chippenham,Singles,GBHL90,,51.4587621,-2.1159032,"Chippenham, UK",Sunday
 2026-10-24,2026-10-24,The Gathering Gloom,Sam Johnson,N.Eng,Manchester,Singles,GBHL90,https://fb.me/e/8eQoSx953,53.4794892,-2.2451148,"Manchester, UK",Saturday
+2026-11-21,2026-11-21,The Lost Legions,Sam Johnson,N.Eng,Manchester,Singles,GBHL80,,53.4794892,-2.2451148,"Manchester, UK",Saturday
 2026-11-22,2026-11-22,Mystic Mix-Up,George Ball,SE,Witney,Singles,GBHL80,,51.7838848,-1.4852861,"Witney, UK",Sunday
 2026-10-31,2026-10-01,The Crownless Shall Be King 2026,Tom Culleton,SE,High Wycombe,Singles,GBHL90,,51.6317449,-0.75596,"High Wycombe, UK",Other
 2026-11-28,2026-11-29,He Eats It By The Block,Jack Darlington,C,Leicester,Singles,GBHL100,https://fb.me/e/4n5SMwAgU,52.6362,-1.1331969,"Leicester, UK",Weekend
