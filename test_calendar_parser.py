@@ -37,6 +37,29 @@ class CalendarTests(unittest.TestCase):
                                  [f"{year}-{month:02}-02" for month in (1, 4, 7, 10)])
                 self.assertTrue(all(e["location"] == "Town - Hall" for e in events))
 
+    def test_event_formats(self):
+        cases = [
+            (2026, 'An Event', 'DOUBLES', None, 'Doubles'),
+            (2026, 'An Event', ' singles ', None, 'Singles'),
+            (2026, 'An Event', 'TEAMS', None, 'Team'),
+            (2026, 'An Event', 'DOUBLES', 'Singles', 'Doubles'),
+            (2026, 'An Event', '', 'Doubles', 'Doubles'),
+            (2027, 'Bristol Doubles', '', None, 'Doubles'),
+            (2027, 'DOUBLE Trouble', '', None, 'Doubles'),
+            (2027, 'Bristol Doubles', 'Singles', None, 'Doubles'),
+            (2027, 'An Event', '', None, 'Singles'),
+            (2027, 'An Event', '', 'Doubles Cup\nOther Organizer\n[SE - Town]', 'Singles'),
+        ]
+        for year, name, label, below, expected in cases:
+            with self.subTest(year=year, name=name, label=label, below=below):
+                result = calendar_fixture(7)
+                rows = result['sheets'][0]['data'][0]['rowData']
+                rows[2]['values'][-1]['formattedValue'] = (
+                    f'{name}\nOrganizer\n[SE - Town]\n{label}')
+                if below is not None:
+                    rows[3] = {'values': [{}] * 6 + [{'formattedValue': below}]}
+                self.assertEqual(parse_calendar(result, year)[0]['format'], expected)
+
     def test_saved_years_survive_refresh_and_repeat_save(self):
         notebook = json.loads(Path(__file__).with_name("gbhl_events.ipynb").read_text(encoding="utf-8"))
         save_code = "".join(notebook["cells"][15]["source"])

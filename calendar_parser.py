@@ -138,30 +138,27 @@ def parse_calendar(result, year):
                     end_date = date_map[(r2, end_col)]
                     break
 
-            # === Extract format (Singles / Doubles) from the row below ===
-            format_type = 'Unknown'
+            # 2026 stores the format after the location inside the event cell.
+            labels = {'single': 'Singles', 'singles': 'Singles',
+                      'double': 'Doubles', 'doubles': 'Doubles',
+                      'team': 'Team', 'teams': 'Team'}
+            format_type = next((labels[line.strip().lower()] for line in lines[3:]
+                                if line.strip().lower() in labels), None)
 
-            # Determine the row below the event block
-            format_row_idx = (merged['endRowIndex'] if merged else row_idx + 1)
-
-            # Use the first column of the merged block if available, else same col
+            # Retain support for a separate format cell, but only accept a label:
+            # another event's name below must not determine this event's format.
+            format_row_idx = merged['endRowIndex'] if merged else row_idx + 1
             format_col_idx = merged['startColumnIndex'] if merged else col_idx
+            if format_type is None and format_row_idx < len(grid):
+                format_cells = grid[format_row_idx].get('values', [])
+                if format_col_idx < len(format_cells):
+                    label = format_cells[format_col_idx].get('formattedValue', '').strip().lower()
+                    format_type = labels.get(label)
 
-            # Safely access the format cell
-            if format_row_idx < len(grid):
-                format_row = grid[format_row_idx]
-                if format_col_idx < len(format_row.get('values', [])):
-                    format_cell = format_row['values'][format_col_idx]
-                    format_val = format_cell.get('formattedValue', '').strip().lower()
-                    if 'double' in format_val:
-                        format_type = 'Doubles'
-                    elif 'single' in format_val:
-                        format_type = 'Singles'
-                    elif 'team' in format_val:
-                        format_type = 'Team'
-                    # Assume missing formats are singles events
-                    else:
-                        format_type = 'Singles'
+            format_type = format_type or 'Singles'
+            # The 2027 tab has no consistent format labels; use its event names.
+            if year == 2027 and 'double' in event_name.lower():
+                format_type = 'Doubles'
 
             event = {
                 'start_date': event_date.strftime('%Y-%m-%d'),

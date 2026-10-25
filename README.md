@@ -14,3 +14,7 @@ added rows or columns are included. Notebook outputs are cleared for review.
 
 Run regression checks with `python -m unittest -v test_calendar_parser` in an
 environment with pandas installed.
+
+Event formats use labels inside event cells (including 2026 Singles, Doubles,
+and Teams labels). In 2027, event names containing "double" are marked Doubles,
+case-insensitively. Events without a format label default to Singles.
