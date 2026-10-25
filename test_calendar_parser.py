@@ -5,7 +5,7 @@ import unittest
 
 import pandas as pd
 
-from calendar_parser import parse_calendar
+from calendar_parser import parse_calendar, inherit_doubles_formats
 
 
 def calendar_fixture(width, offset=0):
@@ -36,6 +36,54 @@ class CalendarTests(unittest.TestCase):
                 self.assertEqual([e["start_date"] for e in events],
                                  [f"{year}-{month:02}-02" for month in (1, 4, 7, 10)])
                 self.assertTrue(all(e["location"] == "Town - Hall" for e in events))
+
+    def test_event_formats(self):
+        cases = [
+            (2026, 'An Event', 'DOUBLES', None, 'Doubles'),
+            (2026, 'An Event', ' singles ', None, 'Singles'),
+            (2026, 'An Event', 'TEAMS', None, 'Team'),
+            (2026, 'An Event', 'DOUBLES', 'Singles', 'Doubles'),
+            (2026, 'An Event', '', 'Doubles', 'Doubles'),
+            (2027, 'Bristol Doubles', '', None, 'Doubles'),
+            (2027, 'DOUBLE Trouble', '', None, 'Doubles'),
+            (2027, 'Bristol Doubles', 'Singles', None, 'Doubles'),
+            (2027, 'An Event', '', None, 'Singles'),
+            (2027, 'An Event', '', 'Doubles Cup\nOther Organizer\n[SE - Town]', 'Singles'),
+        ]
+        for year, name, label, below, expected in cases:
+            with self.subTest(year=year, name=name, label=label, below=below):
+                result = calendar_fixture(7)
+                rows = result['sheets'][0]['data'][0]['rowData']
+                rows[2]['values'][-1]['formattedValue'] = (
+                    f'{name}\nOrganizer\n[SE - Town]\n{label}')
+                if below is not None:
+                    rows[3] = {'values': [{}] * 6 + [{'formattedValue': below}]}
+                self.assertEqual(parse_calendar(result, year)[0]['format'], expected)
+
+    def test_recurring_doubles(self):
+        history = [dict(event_name=name, organizer='Kieran McGrann',
+                        start_date='2026-04-01', format='Doubles')
+                   for name in ('Would You Like A Box?', 'The Cup 2026')]
+        history.append(dict(event_name='I Will Carry Him If I Must', organizer='Jack Darlington',
+                            start_date='2026-09-01', format='Doubles'))
+        cases = [
+            ('Would You Like ... A Box?', 'Kieran McGrann', 'Doubles'),
+            ('The Cup 2027', ' kieran mcgrann ', 'Doubles'),
+            ('I Will Carry Him...Again', 'Jack Darlington', 'Doubles'),
+            ('Would You Like A Box?', 'Someone Else', 'Singles'),
+            ('Different Event', 'Kieran McGrann', 'Singles'),
+            ('Would You Like A Box?', '', 'Singles'),
+        ]
+        for name, organiser, expected in cases:
+            event = dict(event_name=name, organizer=organiser,
+                         start_date='2027-05-01', format='Singles')
+            with self.subTest(name=name, organiser=organiser):
+                self.assertEqual(inherit_doubles_formats([event], history)[0]['format'], expected)
+                self.assertEqual(event['format'], 'Singles')
+                self.assertEqual(inherit_doubles_formats(history + [event])[-1]['format'], expected)
+        fresh = dict(history[0], format='Singles')
+        recurring = dict(history[0], start_date='2027-05-01', format='Singles')
+        self.assertEqual(inherit_doubles_formats([fresh, recurring], history)[1]['format'], 'Singles')
 
     def test_saved_years_survive_refresh_and_repeat_save(self):
         notebook = json.loads(Path(__file__).with_name("gbhl_events.ipynb").read_text(encoding="utf-8"))

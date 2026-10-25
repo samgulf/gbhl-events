@@ -1,4 +1,6 @@
 import calendar
+import re
+import unicodedata
 from datetime import datetime
 
 
@@ -138,30 +140,27 @@ def parse_calendar(result, year):
                     end_date = date_map[(r2, end_col)]
                     break
 
-            # === Extract format (Singles / Doubles) from the row below ===
-            format_type = 'Unknown'
+            # 2026 stores the format after the location inside the event cell.
+            labels = {'single': 'Singles', 'singles': 'Singles',
+                      'double': 'Doubles', 'doubles': 'Doubles',
+                      'team': 'Team', 'teams': 'Team'}
+            format_type = next((labels[line.strip().lower()] for line in lines[3:]
+                                if line.strip().lower() in labels), None)
 
-            # Determine the row below the event block
-            format_row_idx = (merged['endRowIndex'] if merged else row_idx + 1)
-
-            # Use the first column of the merged block if available, else same col
+            # Retain support for a separate format cell, but only accept a label:
+            # another event's name below must not determine this event's format.
+            format_row_idx = merged['endRowIndex'] if merged else row_idx + 1
             format_col_idx = merged['startColumnIndex'] if merged else col_idx
+            if format_type is None and format_row_idx < len(grid):
+                format_cells = grid[format_row_idx].get('values', [])
+                if format_col_idx < len(format_cells):
+                    label = format_cells[format_col_idx].get('formattedValue', '').strip().lower()
+                    format_type = labels.get(label)
 
-            # Safely access the format cell
-            if format_row_idx < len(grid):
-                format_row = grid[format_row_idx]
-                if format_col_idx < len(format_row.get('values', [])):
-                    format_cell = format_row['values'][format_col_idx]
-                    format_val = format_cell.get('formattedValue', '').strip().lower()
-                    if 'double' in format_val:
-                        format_type = 'Doubles'
-                    elif 'single' in format_val:
-                        format_type = 'Singles'
-                    elif 'team' in format_val:
-                        format_type = 'Team'
-                    # Assume missing formats are singles events
-                    else:
-                        format_type = 'Singles'
+            format_type = format_type or 'Singles'
+            # The 2027 tab has no consistent format labels; use its event names.
+            if year == 2027 and 'double' in event_name.lower():
+                format_type = 'Doubles'
 
             event = {
                 'start_date': event_date.strftime('%Y-%m-%d'),
@@ -177,4 +176,38 @@ def parse_calendar(result, year):
 
             events.append(event)
 
+    return events
+
+
+def _normalise_event_name(name):
+    name = unicodedata.normalize('NFKD', str(name)).casefold()
+    name = re.sub(r"\b20\d{2}\b", '', name)
+    return ' '.join(re.findall(r"[^\W_]+", name, flags=re.UNICODE))
+
+
+# Explicit recurring-title variants; the organiser must also match.
+_DOUBLES_NAME_VARIANTS = {
+    'i will carry him again': 'i will carry him if i must',
+}
+
+
+def inherit_doubles_formats(events, historical_events=()):
+    """Mark recurring 2027 events from 2026 doubles, returning copied records."""
+    events = [dict(event) for event in events]
+    # Freshly parsed records take precedence over saved versions of the same event.
+    history = {(event['event_name'], event['start_date']): event
+               for event in [*historical_events, *events]}
+
+    def identity(event):
+        name = _normalise_event_name(event['event_name'])
+        name = _DOUBLES_NAME_VARIANTS.get(name, name)
+        organiser = ' '.join(str(event.get('organizer', '')).casefold().split())
+        return name, organiser
+
+    doubles = {identity(event) for event in history.values()
+               if str(event['start_date']).startswith('2026-')
+               and event.get('format') == 'Doubles' and identity(event)[1]}
+    for event in events:
+        if str(event['start_date']).startswith('2027-') and identity(event) in doubles:
+            event['format'] = 'Doubles'
     return events
