@@ -18,3 +18,8 @@ environment with pandas installed.
 Event formats use labels inside event cells (including 2026 Singles, Doubles,
 and Teams labels). In 2027, event names containing "double" are marked Doubles,
 case-insensitively. Events without a format label default to Singles.
+
+2027 events also inherit Doubles from 2026 events with the same organiser and
+matching names after ignoring case, punctuation, whitespace, and year numbers.
+Explicit title variants cover "I Will Carry Him...Again" / "I Will Carry Him If I Must".
+When refreshing only 2027, the notebook uses saved 2026 events as history.

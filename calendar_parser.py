@@ -1,4 +1,6 @@
 import calendar
+import re
+import unicodedata
 from datetime import datetime
 
 
@@ -174,4 +176,38 @@ def parse_calendar(result, year):
 
             events.append(event)
 
+    return events
+
+
+def _normalise_event_name(name):
+    name = unicodedata.normalize('NFKD', str(name)).casefold()
+    name = re.sub(r"\b20\d{2}\b", '', name)
+    return ' '.join(re.findall(r"[^\W_]+", name, flags=re.UNICODE))
+
+
+# Explicit recurring-title variants; the organiser must also match.
+_DOUBLES_NAME_VARIANTS = {
+    'i will carry him again': 'i will carry him if i must',
+}
+
+
+def inherit_doubles_formats(events, historical_events=()):
+    """Mark recurring 2027 events from 2026 doubles, returning copied records."""
+    events = [dict(event) for event in events]
+    # Freshly parsed records take precedence over saved versions of the same event.
+    history = {(event['event_name'], event['start_date']): event
+               for event in [*historical_events, *events]}
+
+    def identity(event):
+        name = _normalise_event_name(event['event_name'])
+        name = _DOUBLES_NAME_VARIANTS.get(name, name)
+        organiser = ' '.join(str(event.get('organizer', '')).casefold().split())
+        return name, organiser
+
+    doubles = {identity(event) for event in history.values()
+               if str(event['start_date']).startswith('2026-')
+               and event.get('format') == 'Doubles' and identity(event)[1]}
+    for event in events:
+        if str(event['start_date']).startswith('2027-') and identity(event) in doubles:
+            event['format'] = 'Doubles'
     return events

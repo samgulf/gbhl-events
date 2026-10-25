@@ -199,7 +199,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2027-04-10,2027-04-10,I'll Have You Longshanks,Richard Johnson,SW,Gloucester,Singles,GBHL90,,51.8653705,-2.2458192,"Gloucester, UK",Saturday
 2027-04-24,2027-04-24,Look to the East,Duncan Peacock,Sc & Ire,Dundee,Singles,GBHL90,,56.4605938,-2.97019,"Dundee, UK",Saturday
 2027-04-24,2027-04-25,The British Team Champinoships (Home Nations Cup),Matt King,SW,TBC,Singles,GBHL90,,52.518103,-0.3250736,"TBC, UK",Weekend
-2027-04-25,2027-04-25,Would You Like ... A Box?,Kieran McGrann,SE,Bexley,Singles,GBHL80,,51.4416793,0.150488,"Bexley, UK",Sunday
+2027-04-25,2027-04-25,Would You Like ... A Box?,Kieran McGrann,SE,Bexley,Doubles,GBHL80,,51.4416793,0.150488,"Bexley, UK",Sunday
 2027-05-01,2027-05-02,Lords of the West Midlands,Dale Groves,C,Walsall,Singles,GBHL100,,52.5847949,-1.9822687,"Walsall, UK",Weekend
 2027-05-07,2027-05-07,Line of Durin,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL90,,55.861155,-4.2501687,"Glasgow, UK",Other
 2027-05-08,2027-05-09,Battle For Greenhollow,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL100,,55.861155,-4.2501687,"Glasgow, UK",Weekend
@@ -209,7 +209,7 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2027-05-28,2027-05-30,Seven Stones,Damian O'Byrne,SE,London,Singles,GBHL80,,51.5074456,-0.1277653,"London, UK",Other
 2027-05-29,2027-05-29,Great Deeds of Lesser Men,James Donovan,SW,Abergavenny,Singles,GBHL90,,51.8213212,-3.0147935,"Abergavenny, UK",Saturday
 2027-06-05,2027-06-06,Lair Of  The Dragon,Matt King & TBC,SW,Newpor/Bristol/Swindon,Singles,GBHL100,,,,"Newpor/Bristol/Swindon, UK",Weekend
-2027-06-12,2027-06-13,Best Bit of the Book That!,Dale Groves,C,Walsall,Singles,GBHL80,,52.5847949,-1.9822687,"Walsall, UK",Weekend
+2027-06-12,2027-06-13,Best Bit of the Book That!,Dale Groves,C,Walsall,Doubles,GBHL80,,52.5847949,-1.9822687,"Walsall, UK",Weekend
 2027-06-20,2027-06-20,Where Legends Are Made,Charles Sims,N.Eng,Preston,Singles,GBHL80,,53.7593363,-2.6992717,"Preston, UK",Sunday
 2027-06-26,2027-06-27,"Blessings from Gondor, Curses From...",Stevie McCrystal,Sc & Ire,Bangor,Singles,GBHL90,,53.2277163,-4.1268822,"Bangor, UK",Weekend
 2027-06-26,2027-06-27,The Wolf's Lair 5,James Palmer,SE,Woolpit,Singles,GBHL100,,52.2247689,0.8880944,"Woolpit, UK",Weekend
@@ -223,14 +223,14 @@ start_date,end_date,event_name,organizer,region,location,format,event_type,link,
 2027-08-14,2027-08-14,Kill Bill,Jack Brawley,Sc & Ire,Glasgow,Singles,GBHL80,,55.861155,-4.2501687,"Glasgow, UK",Saturday
 2027-08-15,2027-08-15,Hope Remains,Jamie Ailano,N.Eng,Sunderland,Singles,GBHL80,,54.9058512,-1.3828727,"Sunderland, UK",Sunday
 2027-08-21,2027-08-21,That Still Only Counts As One!,James Donovan,SW,Abergavenny,Singles,GBHL90,,51.8213212,-3.0147935,"Abergavenny, UK",Saturday
-2027-08-21,2027-08-22,The Strider Cup,Kieran Street,SE,London,Singles,GBHL80,,51.5074456,-0.1277653,"London, UK",Weekend
+2027-08-21,2027-08-22,The Strider Cup,Kieran Street,SE,London,Doubles,GBHL80,,51.5074456,-0.1277653,"London, UK",Weekend
 2027-08-28,2027-08-28,Four Make A Fellowship,Dale Groves,C,Walsall,Singles,GBHL80,,52.5847949,-1.9822687,"Walsall, UK",Saturday
 2027-09-04,2027-09-05,City of Steel,Ali King,N.Eng,Sheffield,Singles,GBHL100,,53.3806626,-1.4702278,"Sheffield, UK",Weekend
 2027-09-05,2027-09-05,Battle of Bexbree,Kieran McGrann,SE,Bexley,Singles,GBHL80,,51.4416793,0.150488,"Bexley, UK",Sunday
 2027-09-11,2027-09-11,Let This Be The Hour We Draw Swords,Richard Johnson,SW,Gloucester,Singles,GBHL90,,51.8653705,-2.2458192,"Gloucester, UK",Saturday
 2027-09-12,2027-09-12,What About 2nd Army?,Sam Forrest,SW,Swindon,Singles,GBHL80,,51.5615327,-1.7854322,"Swindon, UK",Sunday
 2027-09-12,2027-09-12,Where's My Nazgul?,Luke Bilton,N.Eng,Middlesbrough,Singles,GBHL90,,54.5760419,-1.2344047,"Middlesbrough, UK",Sunday
-2027-09-18,2027-09-18,I Will Carry Him...Again,Jack Darlington,C,Leicester,Singles,GBHL80,,52.6362,-1.1331969,"Leicester, UK",Saturday
+2027-09-18,2027-09-18,I Will Carry Him...Again,Jack Darlington,C,Leicester,Doubles,GBHL80,,52.6362,-1.1331969,"Leicester, UK",Saturday
 2027-09-19,2027-09-19,"Fly, You Fools!",Charles Sims,N.Eng,Preston,Singles,GBHL90,,53.7593363,-2.6992717,"Preston, UK",Sunday
 2027-09-25,2027-09-26,The Lemon Cup 2027,Ashley Woolger,SE,Portsmouth,Singles,GBHL100,,50.800031,-1.0906023,"Portsmouth, UK",Weekend
 2027-10-02,2027-10-02,Bastion of middle earth,Adam Donohoe,SE,Basingstoke,Singles,GBHL90,,51.262826,-1.0861976,"Basingstoke, UK",Saturday
